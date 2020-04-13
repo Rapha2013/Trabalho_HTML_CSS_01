@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="ArquivosCSS/contato.css">
+    <script LANGUAGE="JavaScript" type="text/javascript">
+        function Enviar() {
+            DispWin = window.open()
+            resultado = "<ul><li><b>Nome: </b><br>" + formulario.name.value;
+            resultado += "<li><b>E-Mail: </b><br>" + formulario.email.value;
+            resultado += "<li><b>Telefone: </b><br>" + formulario.number.value;
+            resultado += "<li><b>Prioridade: </b><br>" + formulario.prioridade.value;
+            resultado += "<li><b>Mensagem: </b><br>" + formulario.txtmensagem.value + "</ul>";
+            DispWin.document.write(resultado);
+        }
+    </script>
+    <title>Contato</title>
+</head>
+
+<body>
+    <header>
+        <h1>Desenvolvimento Web I</h1>
+    </header>
+
+
+    <div class="menu">
+        <nav>
+            <ol>
+                <li><a href="index.html">Index</a></li>
+                <li><a href="Aluno_Raphael.html">Aluno 1</a></li>
+                <li><a href="Aluno_02.html">Aluno 2</a></li>
+                <li><a href="Aluno_03.html">Aluno 3</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ol>
+        </nav>
+    </div>
+    <section>
+        <fieldset>
+            <div>
+                <h1>Formulário de Contato</h1>
+            </div>
+            <form name="formulario">
+                <label for="txtnome" class="txtedit">Nome:</label><br>
+                <input type="text" name="name" id="name" placeholder="Digite o nome"></br>
+                <label for="txtnome" class="txtedit">E-mail:</label><br>
+                <input type="email" name="email" id="email" placeholder="Digite seu E-mail"></br>
+                <label for="txtnome" class="txtedit">Telefone:</label><br>
+                <input type="number" name="number" id="numero" placeholder="Telefone"></br>
+                <label for="txtnome" class="txtedit">Prioridade:</label><br>
+                <select name="prioridade" id="prioridade">
+                    <option value="Alta">Alta</option>
+                    <option value="Media">Média</option>
+                    <option value="Baixa">Baixa</option>
+                </select></br><br>
+
+                <label for="txtmensagem" class="txtedit">Mensagem:</label><br>
+                <textarea name="txtmensagem" id="txtmensagem" rows="5" cols="50"
+                    placeholder="Digite a Mensagem"></textarea></br>
+
+                <input id="enviar" type="submit" value="Enviar!" onClick="Enviar();">
+            </form>
+        </fieldset>
+    </section>
+    <footer> &copy; Desenvolvido por Raphael Marangoni - 2020 </footer>
+</body>
+
+</html>
